@@ -131,7 +131,7 @@ df_corr
 
 ### **Results**
 
-The analysis was concluded by a list of insights gained from the 
+The project was concluded by the following list of insights gained from the data analysis:
 
 - Most videos were published in 2014 and second-most in 2006, and has been following a downwarding trends ever since
 - "Music", "film animation" and "entertainment" are the three most popular videos categories by subscribers
