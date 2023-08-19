@@ -80,9 +80,23 @@ df2 = df[['rank', 'Youtuber', 'subscribers', 'video views', 'category',
 
 I decided to divide my data analysis into two parts - "Feature understanding", aiming to get a better grasp of the trends in the dataset and "feature relationship", with the objective to view the relationship between the features. 
 
-Feature understanding 
+**Feature understanding**
 
 
+```
+##Understanding the distribution of when the Youtube videos were published over time (years)
+
+df3['Created_Year'].value_counts().head(5)
+
+#Visulaing the above distubition 
+
+ax = df3['Created_Year'].plot(kind='hist',range=(2001, 2022)
+                              ,bins=22,
+                              title = 'Disribution of Year of Video Publication')
+
+ax.set_xlabel('Year of Publication')            
+plt.show()
+```
 
 
 
