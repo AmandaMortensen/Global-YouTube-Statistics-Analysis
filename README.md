@@ -1,6 +1,6 @@
 # Global-YouTube-Statistics-Analysis
 
-Data analysis in Python using pandas, matplotlib, seaborn and NumpPy 
+Data analysis in Python using pandas, matplotlib, seaborn and NumpPy. Please see the attached Juputyer Noterbook for the full code and visulisations. 
 
 ### **Situation**
 As many other people, I enjoy watching Youtube videos to disconnect and educate myself, which sparked my curiousity about what actually makes for a succesfull Youtube channel. Based on this interest I set out on conducting an analysis on the Global Youtube Statisctic dataset, that would provide me with insights into the key elements that make up a great Youtube channel, including which trends in video veiws and subcribers, as well as the corelation of the featueres 
@@ -97,6 +97,51 @@ ax = df3['Created_Year'].plot(kind='hist',range=(2001, 2022)
 ax.set_xlabel('Year of Publication')            
 plt.show()
 ```
+
+```
+#Top 5 dataset to understand the leading 5 elements of every point, used for visulisation later on.
+
+df_top5 = df3[df3["Rank"]<=5]
+print(df_top5)
+
+```
+
+**Feature relationship**
+
+```
+
+#Getting a yearly breakdown of the corelation between subscribers and video views 
+
+ax = sns.scatterplot(x='Subscribers',
+                y='Video_Views',
+                hue='Created_Year',
+                data=df3).set(title='Corelation Between Video Views and Subscribers, with Year of Creation Information')
+plt.show()
+
+```
+
+
+```
+#Corelation between numeric values
+
+df_corr = df[['rank','video views','subscribers','highest_monthly_earnings']].dropna().corr()
+df_corr  
+```
+
+
+### **Results**
+
+The analysis was concluded by a list of insights gained from the 
+
+- Most videos were published in 2014 and second-most in 2006, and has been following a downwarding trends ever since
+- "Music", "film animation" and "entertainment" are the three most popular videos categories by subscribers
+- T-series is the leading Yotuber with the most subscribers, with 250 million subscribers
+- There is a strong relastionship between number of video views and number of subscribers
+- According to heatmap displaying the corelation coefficient between our numeric values, most values are moderate correlated or not correlated at all
+
+  
+
+
 
 
 
