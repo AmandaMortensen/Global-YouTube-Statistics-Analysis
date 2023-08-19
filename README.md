@@ -29,7 +29,7 @@ For my data analysis, I followed the following steps:
 
 #### Data Exploration 
 
-As part of the data exploration I used pandas to import and get a better understanding og the data, including it's size, it's content and null values. A biref code previww below 
+As part of the data exploration I used pandas to import and get a better understanding og the data, including it's size, it's content and null values. A biref code sample below 
 
 
 ```
@@ -50,7 +50,39 @@ df.isna().sum()
 df.duplicated()
 ```
 
-#### Claening  Exploration 
+#### Claening Exploration 
+
+We want to esnure that our data is clean before undertaken any form of analysis on it, to have the most reliable results. As part of my data cleanign process I removed unnecessary columns and renamed column names. A biref code sample below:
+
+```
+#Removing unnecessary columns
+
+df2 = df[['rank', 'Youtuber', 'subscribers', 'video views', 'category', 
+     #'Title',
+     #'uploads', 
+     'Country', 
+     #'Abbreviation', 'channel_type',
+     #'video_views_rank', 'country_rank', 'channel_type_rank',
+       'video_views_for_the_last_30_days', 
+     #'lowest_monthly_earnings',
+     #'highest_monthly_earnings', 'lowest_yearly_earnings',
+     #'highest_yearly_earnings', 
+     'subscribers_for_last_30_days',
+       'created_year', 'created_month', 
+     #'created_date',
+     #'Gross tertiary education enrollment (%)', 
+     'Population',
+     #'Unemployment rate', 'Urban_population', 'Latitude', 'Longitude'
+    ]].copy()
+```
+
+#### Data Analysis
+
+I decided to divide my data analysis into two parts - "Feature understanding", aiming to get a better grasp of the trends in the dataset and "feature relationship", with the objective to view the relationship between the features. 
+
+Feature understanding 
+
+
 
 
 
